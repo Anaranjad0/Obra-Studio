@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'Pages/home.dart';
+import 'pages/home.dart'; // Importamos la pantalla Home
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '',
+      title: 'ObraStudio',
       theme: ThemeData(
         primarySwatch: Colors.teal,
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const HomePage(), // Usamos HomePage
     );
   }
 }

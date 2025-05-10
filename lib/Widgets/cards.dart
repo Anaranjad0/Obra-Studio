@@ -7,7 +7,14 @@ class SampleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        width: 300, height: 200, child: Center(child: Text(cardName)));
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Text(
+          cardName,
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
+      ),
+    );
   }
 }
