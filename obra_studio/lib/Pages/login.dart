@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider;
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 
-class LoginPage extends StatefulWidget {
+class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
-  State<LoginPage> createState() => LoginPageState();
-}
-
-class LoginPageState extends State<LoginPage> {
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          children: [const SizedBox(height: 16.0), const Text('OBRA STUDIO')],
-        ),
-      ),
+    final providers = [EmailAuthProvider()];
+
+    return SignInScreen(
+      providers: providers,
+      actions: [
+        AuthStateChangeAction<UserCreated>((context, state) {
+          Navigator.pushReplacementNamed(context, '/home');
+        }),
+        AuthStateChangeAction<SignedIn>((context, state) {
+          Navigator.pushReplacementNamed(context, '/home');
+        }),
+      ],
     );
   }
 }

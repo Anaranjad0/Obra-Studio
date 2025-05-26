@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "442530405537",
+    "project_id": "obrastudio-75ec9",
+    "storage_bucket": "obrastudio-75ec9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442530405537:android:ee268b3ff820b3601964e0",
+        "android_client_info": {
+          "package_name": "com.example.obra_studio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP5tt0hr1XSlpyJBnJe-DLu-Rj8V_bAQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
