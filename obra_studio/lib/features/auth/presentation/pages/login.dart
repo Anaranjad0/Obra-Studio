@@ -13,10 +13,10 @@ class LoginPage extends StatelessWidget {
       providers: providers,
       actions: [
         AuthStateChangeAction<UserCreated>((context, state) {
-          Navigator.pushReplacementNamed(context, '/home');
+          Navigator.pushReplacementNamed(context, '/dashboard');
         }),
         AuthStateChangeAction<SignedIn>((context, state) {
-          Navigator.pushReplacementNamed(context, '/home');
+          Navigator.pushReplacementNamed(context, '/dashboard');
         }),
       ],
     );
