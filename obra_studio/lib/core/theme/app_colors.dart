@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color primary = Color(0xFFB3A364);
-  static const Color secondary = Color(0xFFDEC357);
-  static const Color tertiary = Color(0xFF8A8263);
-  static const Color surface = Color(0xFF5E5C54);
-  static const Color background = Color(0xFF333026);
-  static const Color accent = Color(0xFF3B321B);
+  static const Color primary = Color(0xFF006E6D); // Azul petróleo
+  static const Color secondary = Color(0xFFF9D03B); // Amarillo lima
+  static const Color tertiary = Color(0xFF75BA6F); // Verde éxito
+  static const Color surface = Color(0xFFF5F5F5); // Fondo de cards
+  static const Color background = Color(0xFFFAFAFA); // Fondo general
+  static const Color error = Color(0xFFB00020); // Rojo Material
 }
