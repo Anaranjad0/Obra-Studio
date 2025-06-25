@@ -11,8 +11,6 @@ class AppTheme {
       onSecondary: Colors.black,
       tertiary: AppColors.tertiary,
       onTertiary: Colors.black,
-      background: AppColors.background,
-      onBackground: Colors.black,
       surface: AppColors.surface,
       onSurface: Colors.black,
       error: AppColors.error,

@@ -1,14 +1,12 @@
 name: obra_studio
 description: "A new Flutter project."
 
-publish_to: 'none' 
-
+publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
   sdk: ^3.7.2
-
 
 dependencies:
   flutter:
@@ -19,9 +17,6 @@ dependencies:
   firebase_core: ^2.32.0
   firebase_ui_auth: ^1.13.0
 
-
-
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -29,3 +24,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/logo.png       

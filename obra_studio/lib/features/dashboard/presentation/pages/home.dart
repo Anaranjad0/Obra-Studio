@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:obra_studio/core/routes/app_routes.dart';
-import 'package:obra_studio/core/theme/app_colors.dart';
 import 'package:obra_studio/features/dashboard/presentation/widgets/custom_bottomNavigator.dart';
 import 'package:obra_studio/features/dashboard/presentation/widgets/custom_appbar.dart';
 import 'package:obra_studio/features/dashboard/presentation/widgets/custom_card.dart';
