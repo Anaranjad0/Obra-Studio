@@ -7,25 +7,36 @@ class HomeContentPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return ListView(
       padding: const EdgeInsets.all(16.0),
       children: [
-        CustomCard(
-          title: 'Documentación Técnica',
-          backgroundImagePath: 'assets/images/cards/documentacion.webp',
-          onTap: () => Navigator.pushNamed(context, AppRoutes.documentacion),
+        SizedBox(
+          height: screenHeight * 0.25,
+          child: CustomCard(
+            title: 'Documentación Técnica',
+            backgroundImagePath: 'assets/images/cards/documentacion.webp',
+            onTap: () => Navigator.pushNamed(context, AppRoutes.documentacion),
+          ),
         ),
         const SizedBox(height: 16),
-        CustomCard(
-          title: 'Obra',
-          backgroundImagePath: 'assets/images/cards/obra.webp',
-          onTap: () => Navigator.pushNamed(context, AppRoutes.obra),
+        SizedBox(
+          height: screenHeight * 0.25,
+          child: CustomCard(
+            title: 'Obra',
+            backgroundImagePath: 'assets/images/cards/obra.webp',
+            onTap: () => Navigator.pushNamed(context, AppRoutes.obra),
+          ),
         ),
         const SizedBox(height: 16),
-        CustomCard(
-          title: 'Proyecto',
-          backgroundImagePath: 'assets/images/cards/proyecto.webp',
-          onTap: () => Navigator.pushNamed(context, AppRoutes.proyecto),
+        SizedBox(
+          height: screenHeight * 0.25,
+          child: CustomCard(
+            title: 'Proyecto',
+            backgroundImagePath: 'assets/images/cards/proyecto.webp',
+            onTap: () => Navigator.pushNamed(context, AppRoutes.proyecto),
+          ),
         ),
       ],
     );
