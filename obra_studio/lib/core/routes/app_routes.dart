@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:obra_studio/features/auth/presentation/pages/login.dart';
-import 'package:obra_studio/features/dashboard/presentation/pages/home.dart';
+import 'package:obra_studio/features/dashboard/presentation/pages/home_wrapper.dart';
 import 'package:obra_studio/features/documentacion/presentation/pages/documentacion_page.dart';
 import 'package:obra_studio/features/obra/presentation/pages/obra_page.dart';
 import 'package:obra_studio/features/proyecto/presentation/pages/proyecto_page.dart';

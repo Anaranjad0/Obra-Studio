@@ -1,45 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-
-    return AppBar(
-      backgroundColor: colorScheme.primary,
-      leading: Icon(Icons.construction, color: colorScheme.onPrimary),
-      title: Text(
-        'ObraStudio',
-        style: TextStyle(
-          color: colorScheme.onPrimary,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      actions: <Widget>[
-        PopupMenuButton<String>(
-          onSelected: (value) async {
-            if (value == 'logout') {
-              await FirebaseAuth.instance.signOut();
-              Navigator.pushReplacementNamed(context, '/login');
-            }
-          },
-          itemBuilder: (BuildContext context) {
-            return [
-              const PopupMenuItem<String>(
-                value: 'logout',
-                child: Text('Cerrar sesión'),
-              ),
-            ];
-          },
-          icon: Icon(Icons.menu, color: colorScheme.onPrimary),
-        ),
-      ],
-    );
-  }
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Widget build(BuildContext context) {
+    return AppBar(
+      automaticallyImplyLeading: false,
+      backgroundColor: Theme.of(context).colorScheme.primary,
+      elevation: 2,
+      centerTitle: true,
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text(
+            'ObraStudio',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Colors.white,
+            ),
+          ),
+          Image.asset('assets/images/logo_blanco.png', height: 35),
+          const SizedBox(width: 12),
+        ],
+      ),
+    );
+  }
 }

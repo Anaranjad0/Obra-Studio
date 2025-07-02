@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../widget/gantt.dart';
+import '../widget/checklist.dart';
 
 class ObraPage extends StatelessWidget {
   const ObraPage({super.key});
@@ -6,23 +8,19 @@ class ObraPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Obra')),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
+      appBar: AppBar(title: const Text('Seguimiento de Obra')),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
+          children: const [
+            Text(
               'Diagrama de Gantt',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 16),
-            Container(
-              height: 150,
-              color: Colors.grey[300],
-              child: const Center(child: Text('diagrama')),
-            ),
-            const Spacer(),
+            SizedBox(height: 12),
+            GanttChartWidget(),
+            SizedBox(height: 24),
+            ChecklistAvanceObra(),
           ],
         ),
       ),

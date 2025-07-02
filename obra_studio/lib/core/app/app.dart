@@ -3,8 +3,9 @@ import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 import '../../core/routes/app_routes.dart';
 import '../../core/theme/app_theme.dart';
-import 'package:obra_studio/features/dashboard/presentation/pages/home.dart';
+import 'package:obra_studio/features/dashboard/presentation/pages/home_wrapper.dart';
 import 'package:obra_studio/features/auth/presentation/pages/login.dart';
+import '../../features/auth/presentation/pages/splash_screen.dart';
 
 class ObraStudio extends StatelessWidget {
   const ObraStudio({super.key});
@@ -33,14 +34,12 @@ class ObraStudio extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Scaffold(
-              body: Center(child: CircularProgressIndicator()),
-            );
+            return const SplashScreen();
           }
           if (snapshot.hasData) {
-            return const HomePage(); // ✅ widget, no ruta
+            return const HomePage();
           }
-          return const LoginPage(); // ✅ widget, no ruta
+          return const LoginPage();
         },
       ),
     );
